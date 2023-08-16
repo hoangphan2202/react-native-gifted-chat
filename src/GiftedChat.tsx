@@ -50,6 +50,7 @@ import { SystemMessage, SystemMessageProps } from './SystemMessage'
 import { Time, TimeProps } from './Time'
 import * as utils from './utils'
 
+dayjs.locale('vi');
 dayjs.extend(localizedFormat)
 
 export interface GiftedChatProps<TMessage extends IMessage = IMessage> {
@@ -292,9 +293,9 @@ function GiftedChat<TMessage extends IMessage = IMessage>(
       ...(text !== undefined && text !== state.text && { text: text }),
     })
 
-    if (inverted === false && messages?.length) {
-      setTimeout(() => scrollToBottom(false), 200)
-    }
+    // if (inverted === false && messages?.length) {
+    //   setTimeout(() => scrollToBottom(false), 200)
+    // }
 
     return () => {
       isMountedRef.current = false
