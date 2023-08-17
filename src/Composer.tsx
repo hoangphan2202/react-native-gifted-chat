@@ -51,6 +51,7 @@ export interface ComposerProps {
   disableComposer?: boolean
   onTextChanged?(text: string): void
   onInputSizeChanged?(layout: { width: number; height: number }): void
+  onSend?(): void
 }
 
 export function Composer({

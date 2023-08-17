@@ -77,9 +77,9 @@ export function InputToolbar<TMessage extends IMessage = IMessage>(
         {renderSend?.(props) || <Send {...props} />}
       </View>
       {renderAccessory && (
-        <View style={[styles.accessory, props.accessoryStyle]}>
-          {renderAccessory(props)}
-        </View>
+          <View style={[styles.accessory, props.accessoryStyle]}>
+            {renderAccessory(props)}
+          </View>
       )}
     </View>
   )
